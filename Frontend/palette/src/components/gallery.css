@@ -1,0 +1,68 @@
+/* Gallery.css */
+
+.gallery-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .gallery-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .artwork-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .artwork-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .artwork-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .artwork-info {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .artwork-title {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #444;
+  }
+  
+  .artwork-artist {
+    font-size: 1em;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .artwork-price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e91e63;
+  }
+  
+  .loading {
+    text-align: center;
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 50px;
+  }
+  
