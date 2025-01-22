@@ -6,7 +6,6 @@ Key Features:
 
 Artist Profiles:
 
-Artists can create a personal profile with a bio, contact details, and a portfolio section.
 Each profile will display the artist’s uploaded artworks in a grid view.
 Artwork Showcase:
 
@@ -14,23 +13,12 @@ Artists can upload high-resolution images of their artwork with descriptions, ti
 Each artwork will have a detailed view, including a zoom feature for users to examine finer details.
 E-commerce Integration:
 
-Buyers can add artwork to a cart, purchase via integrated payment gateways, and track orders.
+Buyers can add artwork to a cart, purchase via integrated payment gateways.
 Artists receive notifications of sales and can manage inventory from their dashboard.
 Search and Filter:
 
 Users can search for artwork by artist, category, or price range.
-Advanced filters such as popularity, newly added, and trending pieces enhance discoverability.
-Community Engagement:
 
-A commenting and review section for buyers to share feedback on purchased artwork.
-Artists can interact with their audience and build a following.
-Admin Dashboard:
-
-An admin panel to monitor user activities, sales statistics, and reported issues.
-Tools to approve or moderate new artist signups and uploaded artwork.
-Responsive Design:
-
-Mobile-first, ensuring seamless browsing and purchasing experiences across devices.
 Technology Stack:
 
 Frontend: React.js for a responsive and interactive user interface.
