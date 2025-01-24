@@ -19,7 +19,7 @@ const Signup = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:5000/signup", formData, {
+      const response = await axios.post("https://s48-drishan-capstone-artgallery.onrender.com/signup", formData, {
         headers: {
           "Content-Type": "application/json",
         },
