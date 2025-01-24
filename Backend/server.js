@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors"); // Import CORS
 const dotenv = require("dotenv");
 const connectDB = require("./db");
-const User = require("./Models/Signup");
+const User = require("./Models/SIgnup");
 
 dotenv.config();
 const app = express();
