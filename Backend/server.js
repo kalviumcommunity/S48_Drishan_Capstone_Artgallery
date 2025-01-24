@@ -19,9 +19,8 @@ app.post("/signup", async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
-    // Create new user
     const newUser = await User.create({ name, email, password });
-    console.log("User Created: ", newUser); // Log the newly created user
+    console.log("User Created: ", newUser);
     res.status(201).json({ message: "User created successfully", user: newUser });
   } catch (error) {
     console.error(error);
@@ -32,11 +31,35 @@ app.post("/signup", async (req, res) => {
 // GET API - Retrieve all user details
 app.get("/users", async (req, res) => {
   try {
-    const users = await User.find(); // Fetch all users from the database
-    res.status(200).json(users); // Send the user data as JSON response
+    const users = await User.find();
+    res.status(200).json(users);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Failed to retrieve users" });
+  }
+});
+
+// PUT API - Update user details by ID
+app.put("/users/:id", async (req, res) => {
+  const { id } = req.params;
+  const { name, email, password } = req.body;
+
+  try {
+    // Find user by ID and update their details
+    const updatedUser = await User.findByIdAndUpdate(
+      id,
+      { name, email, password },
+      { new: true } // Return the updated document
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    res.status(200).json({ message: "User updated successfully", user: updatedUser });
+  } catch (error) {
+    console.error(error);
+    res.status(400).json({ error: "Failed to update user" });
   }
 });
 
