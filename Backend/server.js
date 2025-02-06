@@ -39,29 +39,6 @@ app.get("/users", async (req, res) => {
   }
 });
 
-// PUT API - Update user details by ID
-app.put("/users/:id", async (req, res) => {
-  const { id } = req.params;
-  const { name, email, password } = req.body;
-
-  try {
-    // Find user by ID and update their details
-    const updatedUser = await User.findByIdAndUpdate(
-      id,
-      { name, email, password },
-      { new: true } // Return the updated document
-    );
-
-    if (!updatedUser) {
-      return res.status(404).json({ error: "User not found" });
-    }
-
-    res.status(200).json({ message: "User updated successfully", user: updatedUser });
-  } catch (error) {
-    console.error(error);
-    res.status(400).json({ error: "Failed to update user" });
-  }
-});
 
 // Start Server
 const PORT = process.env.PORT || 5000;
