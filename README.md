@@ -61,6 +61,7 @@ Day 13-14: Artwork Details & Search Feature
 
 Implement a detailed view page for artworks with descriptions and a zoom feature.
 Add a search bar and category filters for easy artwork discovery.
+
 Phase 3: E-Commerce & Payment Integration (Week 4)
 
 Day 15-17: Cart & Order Processing
